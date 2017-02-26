@@ -1,0 +1,20 @@
+import {AuthCheckMode} from "./modules/security/services/auth.service";
+
+export class AppSettings {
+
+    static get LOGIN_MODE(): number {
+        return AuthCheckMode.PAGE;
+    }
+
+    static get LOGIN_MODAL_STATIC(): boolean {
+        return false;
+    }
+
+    static get DATASTORE_FIXTURES_DELAY(): number {
+        return 250;
+    }
+
+    static get PRELOADER_AUTO_CONSUMERS(): boolean {
+        return true;
+    }
+}
