@@ -55,8 +55,9 @@ Intended decorator usage:
 
 Notes:
 
-> * Decorator must register decorated component in `PreloaderRegistry` by passing target class and config metadata object to `registerConsumer` method.
-> * Config metadata object must be of type `PreloadResolveConfig`.
-> * Also, `PreloadResolve` resolve guard must be added to corresponding route in Angular module configuration.
-> * Successful result will force preload of client detail entity before creating `ClientDetailComponent` at [/clients/1].
+> * To achieve successful result, component `app/modules/client/components/client-detail.component#ClientDetailComponent` must be decorated with implemented `PreloadResolve` decorator
+> * Decorator must register decorated component in `PreloaderRegistry` by passing target component class and config metadata object to `registerConsumer` method.
+> * Config metadata object must be of type `PreloadResolveConfig`
+> * Also, `PreloadResolve` resolve guard must be added to corresponding route in Angular module configuration
+> * Successful result will force preload of client detail entity from datastore before creating `ClientDetailComponent` at [/clients/1]
 
